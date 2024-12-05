@@ -196,7 +196,7 @@
   
   .line {
     fill: none;
-    stroke: white;
+    stroke: black;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2;
