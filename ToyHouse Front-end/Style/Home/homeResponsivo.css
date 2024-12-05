@@ -1,0 +1,136 @@
+/* Nesse Media Screen foi definido o Minimo da altura no header, classe pai da header-container*/
+@media (max-height: 800px) {
+
+    .header {
+
+        .header-container {
+            max-height: 8vh;
+            /*background-color: green;*/
+
+            & .logo {
+                /*background-color: teal;*/
+                padding: 5px;
+
+                & img {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/*Essas medias foram escolhidas para com base no Header, vou usar como padrão*/
+@media (min-height: 800px) and (max-height: 950px) {
+
+
+    .header {
+
+        .header-container {
+            max-height: 10vh;
+            /*background-color: violet;*/
+
+            & .logo {
+                /*background-color: teal;*/
+                padding: 5px;
+
+                & img {
+                    height: 45px;
+                    width: 45px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-height: 950px) and (max-height: 1100px) {
+
+    .header-container {
+        max-height: 8.5vh;
+        /*background-color: red;*/
+
+        & .logo {
+            /*background-color: gold;*/
+            padding: 5px;
+
+            & img {
+                height: 45px;
+                width: 45px;
+            }
+        }
+    }
+}
+
+
+@media (min-height: 1100px) and (max-height: 1350px) {
+    .header-container {
+        max-height: 7.5vh;
+        /*background-color: lightblue;*/
+    }
+}
+
+@media (min-height: 1350px) and (max-height: 1550px) {
+    .header-container {
+        max-height: 6.5vh;
+        /*background-color: purple;*/
+    }
+}
+
+
+@media (min-height: 1550px) and (max-height: 1800px) {
+    .header-container {
+        max-height: 5.5vh;
+        /*background-color: brown;*/
+    }
+}
+
+
+
+/*BREAKPOINT DE LARGURA*/
+
+@media (min-width: 1650px) and (max-width: 1850px) {
+
+
+    .header-container {
+        /*background-color: aquamarine;*/
+        max-width: 80%;
+    }
+}
+
+
+@media (min-width: 1850px) {
+    .header-container {
+        /*background-color: yellow;*/
+        max-width: 100em;
+    }
+}
+
+
+/*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
+
+@media (max-width: 1350px) {
+
+    .header {
+        & .header-container {
+
+            justify-content: space-between;
+
+            & .nav-container {
+                display: none;
+                /*Não funcionar*/
+                /*background-color: white;*/
+            }
+
+            & .hamburguer-container {
+                display: flex;
+            }
+        }
+    }
+
+
+}
