@@ -111,26 +111,43 @@
 }
 
 
-/*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
 
-@media (max-width: 1350px) {
+
+/*Esse é o último BreakPoint antes do Menu Hamburguer.*/
+@media (min-width: 1100px) and  (max-width: 1350px) {
 
     .header {
         & .header-container {
-
-            justify-content: space-between;
-
             & .nav-container {
-                display: none;
-                /*Não funcionar*/
-                /*background-color: white;*/
+                min-width: 90%;
             }
 
-            & .hamburguer-container {
-                display: flex;
-            }
         }
     }
 
-
 }
+
+
+/*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
+
+@media (max-width: 1100px){
+
+    .header{
+        & .header-container{
+
+           
+            justify-content: space-between;
+
+            & .nav-container{
+                display: none;
+            }
+
+            & .hamburguer-container{
+                display: flex;
+            }
+
+        }
+    }
+}
+
+

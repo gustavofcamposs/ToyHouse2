@@ -67,14 +67,20 @@
         & .hamburguer-container{
             display: none;
 
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
 
             height: 90%;
-            width: 10%;
+            width: auto; /*Defino com auto*/
 
-            border: #7BC8F6 solid 1px;
+            /*border: #7BC8F6 solid 1px;*/
+
+            /*Adiciono uma margin para eles sempre ficarem separados, isso evita eu criar breaksPoint só para aumentar o tamanho do Hamburguer-container*/
+            &  .hamburger{
+                margin-left: 20px; 
+            }
         }
+        
     }
 
 }
