@@ -2,14 +2,41 @@
 @media (max-height: 800px) {
 
     .header {
+        min-height: 9.5vh;
+        max-height: 10.5vh;
 
         .header-container {
-            max-height: 8vh;
-            /*background-color: green;*/
+            max-height: 90%;
 
             & .logo {
                 /*background-color: teal;*/
                 padding: 5px;
+
+                & img {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/*Essas medias foram escolhidas para com base no Header, vou usar como padrão*/
+/*Celulares*/
+@media (min-height: 800px) and (max-height: 950px) {
+
+
+    .header {
+        height: 9vh;
+
+        .header-container {
+            height: 80%;
+            /*background-color: red;*/
+
+            & .logo {
 
                 & img {
                     height: 35px;
@@ -22,65 +49,70 @@
 }
 
 
-
-/*Essas medias foram escolhidas para com base no Header, vou usar como padrão*/
-@media (min-height: 800px) and (max-height: 950px) {
-
+/*Alguns tablets Menores*/
+@media (min-height: 950px) and (max-height: 1100px) {
 
     .header {
+        max-height: 8vh;
 
-        .header-container {
-            max-height: 10vh;
-            /*background-color: violet;*/
+        & .header-container {
+            max-height: 75%;
+            /*background-color: peru;*/
 
             & .logo {
-                /*background-color: teal;*/
-                padding: 5px;
-
                 & img {
-                    height: 45px;
-                    width: 45px;
+                    height: 50px;
+                    width: 50px;
                 }
             }
         }
     }
-
 }
 
 
-@media (min-height: 950px) and (max-height: 1100px) {
+/*Grandes tablets como IPAD Pro */
+@media (min-height: 1100px) and (max-height: 1367px) {
 
-    .header-container {
-        max-height: 8.5vh;
-        /*background-color: red;*/
+    .header {
+        max-height: 7vh;
 
-        & .logo {
-            /*background-color: gold;*/
-            padding: 5px;
+        & .header-container {
+            max-height: 70%;
+            /*background-color: yellow;*/
 
-            & img {
-                height: 45px;
-                width: 45px;
+            & .logo {
+                & img {
+                    height: 50px;
+                    width: 50px;
+                }
             }
         }
+
     }
+
 }
 
 
-@media (min-height: 1100px) and (max-height: 1350px) {
-    .header-container {
-        max-height: 7.5vh;
-        /*background-color: lightblue;*/
+/*Grandes monitores*/
+@media (min-height: 1367px) and (max-height: 1550px) {
+    .header {
+
+        max-height: 6vh;
+
+        & .header-container {
+            max-height: 70%;
+            /*background-color: aquamarine;*/
+
+            & .logo {
+                & img {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+
     }
 }
-
-@media (min-height: 1350px) and (max-height: 1550px) {
-    .header-container {
-        max-height: 6.5vh;
-        /*background-color: purple;*/
-    }
-}
-
 
 @media (min-height: 1550px) and (max-height: 1800px) {
     .header-container {
@@ -88,6 +120,9 @@
         /*background-color: brown;*/
     }
 }
+
+
+
 
 
 
@@ -114,7 +149,7 @@
 
 
 /*Esse é o último BreakPoint antes do Menu Hamburguer.*/
-@media (min-width: 1100px) and  (max-width: 1350px) {
+@media (min-width: 1100px) and (max-width: 1350px) {
 
     .header {
         & .header-container {
@@ -130,19 +165,19 @@
 
 /*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
 
-    .header{
-        & .header-container{
+    .header {
+        & .header-container {
 
-           
+
             justify-content: space-between;
 
-            & .nav-container{
+            & .nav-container {
                 display: none;
             }
 
-            & .hamburguer-container{
+            & .hamburguer-container {
                 display: flex;
             }
 
@@ -151,3 +186,22 @@
 }
 
 
+/*GAP ENTRE 550 A 1099 Não foi necessário modificar*/
+
+/*Redimensionar o tamanho da Lupa de Procurar em dispositivos Mobile*/
+@media (max-width: 550px){
+
+    .header{
+
+        & .header-container{
+
+            & .hamburguer-container{
+
+                & .button{
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+        }
+    }
+} 
