@@ -132,7 +132,7 @@
 
 
     .header-container {
-        /*background-color: aquamarine;*/
+        background-color: aquamarine;
         max-width: 80%;
     }
 }
@@ -164,6 +164,7 @@
 
 
 /*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
+/*E nesse breakpoint começa a ser ajustado o Banner*/
 
 @media (max-width: 1100px) {
 
@@ -185,14 +186,34 @@
     }
 
     .banner{
-
         height: 35vh; /*O normal é 45*/
 
-        background-color: #fefefe;
-        border-bottom: red solid 1px;
         background-size: contain;
         background-repeat: no-repeat;
     }
+}
+
+/*Essas medias são apenas para reajustar o banner*/
+@media (max-width: 990px){
+    
+    .banner{
+        height: 30vh;
+    }
+
+}
+@media (max-width: 800px){
+    
+    .banner{
+        height: 25vh;
+    }
+
+}
+@media (max-width: 680px){
+    
+    .banner{
+        height: 20vh;
+    }
+
 }
 
 
@@ -219,7 +240,7 @@
     /*Menu que aparece ao clicar no menu Hamburguer*/
     .container{
         & .menu-hamburguer{
-            height: 45vh;
+            height: 25vh;
         }
     }
 
