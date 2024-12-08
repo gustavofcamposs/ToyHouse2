@@ -183,25 +183,51 @@
 
         }
     }
+
+    .banner{
+
+        height: 35vh; /*O normal é 45*/
+
+        background-color: #fefefe;
+        border-bottom: red solid 1px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 
 /*GAP ENTRE 550 A 1099 Não foi necessário modificar*/
 
 /*Redimensionar o tamanho da Lupa de Procurar em dispositivos Mobile*/
-@media (max-width: 550px){
+@media (max-width: 550px) {
 
-    .header{
+    .header {
 
-        & .header-container{
+        & .header-container {
 
-            & .hamburguer-container{
+            & .hamburguer-container {
 
-                & .button{
+                & .button {
                     height: 32px;
                     width: 32px;
                 }
             }
         }
     }
-} 
+
+
+    /*Menu que aparece ao clicar no menu Hamburguer*/
+    .container{
+        & .menu-hamburguer{
+            height: 45vh;
+        }
+    }
+
+
+    .banner{
+        height: 16vh;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

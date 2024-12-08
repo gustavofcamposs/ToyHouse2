@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Meta descrição para SEO: oferece um resumo da página nos resultados de busca -->
+    <meta name="description" content="Descrição da sua página" />
 
-    <!--FONT-->
+    <!--Importando Fontes do Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Crafty+Girls&family=Kaushan+Script&family=Moirai+One&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Spray+Paint&family=Syne+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
 
+        <!--Importando o Css Utilizado no site -->
     <link rel="stylesheet" href="./Style/Home/home.css">
     <link rel="stylesheet" href="./Style/Home/homeResponsivo.css">
+    <script src="./Script/Home/headerHamburguer.js"></script>
 
     <link rel="icon" href="./Image/Home/ToyHouseLogo.jpg" type="image/x-icon">
 
-    <title>Toy House Brinquedos - Quantos mais Brincadeira, Melhor!</title>
+    <title>Toy House - Quantos mais Brincadeira, Melhor!</title>
 </head>
 
 <body>
@@ -52,12 +56,13 @@
 
             <div class="hamburguer-container">
 
-                <button class="button">
+                <button class="button" aria-label="Iniciar Pesquisa">
                     <span class="span">🔎</span>
                 </button>
 
-                <label class="hamburger">
-                    <input type="checkbox">
+                <!-- Menu hamburguer com checkbox para mostrar/esconder conteúdo -->
+                <label class="hamburger" aria-label="Abrir menu">
+                    <input type="checkbox" onclick="clickMenu()">
                     <svg viewBox="0 0 32 32">
                         <path class="line line-top-bottom"
                             d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
@@ -65,9 +70,17 @@
                         <path class="line" d="M7 16 27 16"></path>
                     </svg>
                 </label>
+                <script src="./Script/Home/headerHamburguer.js"></script>
             </div>
         </div>
     </header>
+
+    <div class="container" id="menu-hamburguer">
+        <div class="menu-hamburguer"></div>
+    </div>
+
+    <div class="banner">
+    </div>
 
 </body>
 
