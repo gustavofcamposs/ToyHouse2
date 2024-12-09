@@ -27,65 +27,68 @@
 
 <body>
 
-    <header class="header">
-        <div class="header-container">
+    <div class="site-container">
 
-            <div class="logo">
-                <img src="./Image/Home/ToyHouseLogo.jpg" alt="Logotipo ToyHouse">
-            </div>
+        <header class="header">
+            <div class="header-container">
 
-            <nav class="nav-container">
-                <li class="nav-item">
-                    <p>Conheça nossas Marcas</p>
-                    <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
-                </li>
-                <li class="nav-item">
-                    <p>Visualize por Idade</p>
-                    <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
-                </li>
-                <li class="nav-item">
-                    <p>Vizualize Nossas Categorias</p>
-                    <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
-                </li>
-                <li class="nav-item">
-                    <button class="button">
+                <div class="logo">
+                    <img src="./Image/Home/ToyHouseLogo.jpg" alt="Logotipo ToyHouse">
+                </div>
+
+                <nav class="nav-container">
+                    <li class="nav-item">
+                        <p>Conheça nossas Marcas</p>
+                        <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
+                    </li>
+                    <li class="nav-item">
+                        <p>Visualize por Idade</p>
+                        <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
+                    </li>
+                    <li class="nav-item">
+                        <p>Vizualize Nossas Categorias</p>
+                        <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
+                    </li>
+                    <li class="nav-item">
+                        <button class="button">
+                            <span class="span">🔎</span>
+                        </button>
+                    </li>
+                </nav>
+
+                <div class="hamburguer-container">
+
+                    <button class="button" aria-label="Iniciar Pesquisa">
                         <span class="span">🔎</span>
                     </button>
-                </li>
-            </nav>
 
-            <div class="hamburguer-container">
+                    <!-- Menu hamburguer com checkbox para mostrar/esconder conteúdo -->
+                    <label class="hamburger" aria-label="Abrir menu">
+                        <input type="checkbox" onclick="clickMenu()">
+                        <svg viewBox="0 0 32 32">
+                            <path class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                            </path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                    </label>
+                    <script src="./Script/Home/headerHamburguer.js"></script>
+                </div>
+            </div>
+        </header>
 
-                <button class="button" aria-label="Iniciar Pesquisa">
-                    <span class="span">🔎</span>
-                </button>
 
-                <!-- Menu hamburguer com checkbox para mostrar/esconder conteúdo -->
-                <label class="hamburger" aria-label="Abrir menu">
-                    <input type="checkbox" onclick="clickMenu()">
-                    <svg viewBox="0 0 32 32">
-                        <path class="line line-top-bottom"
-                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
-                        </path>
-                        <path class="line" d="M7 16 27 16"></path>
-                    </svg>
-                </label>
-                <script src="./Script/Home/headerHamburguer.js"></script>
+        <!--Esse container é o que é aberto quando o input hamburguer for clicado-->
+        <div class="container" id="menu-hamburguer">
+            <div class="menu-hamburguer">
+                <p>Conheça nossas Marcas</p>
+
+                <p>Visualize por Idade</p>
+
+                <p>Vizualize Nossas Categorias</p>
             </div>
         </div>
-    </header>
 
-    <div class="container" id="menu-hamburguer">
-        <div class="menu-hamburguer">
-            <p>Conheça nossas Marcas</p>
-
-            <p>Visualize por Idade</p>
-
-            <p>Vizualize Nossas Categorias</p>
-        </div>
-    </div>
-
-    <div class="banner">
     </div>
 
 </body>

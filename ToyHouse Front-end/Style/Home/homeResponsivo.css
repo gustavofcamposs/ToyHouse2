@@ -1,149 +1,198 @@
-/* Nesse Media Screen foi definido o Minimo da altura no header, classe pai da header-container*/
-@media (max-height: 800px) {
+/* BREAKPOINT PARA DISPOSITIVOS PEQUENOS*/
+@media (min-height: 630px) and (max-height: 750px){
 
-    .header {
-        min-height: 9.5vh;
-        max-height: 10.5vh;
+    .header{
+        max-height: 10vh;
+    }
 
-        .header-container {
-            max-height: 90%;
+    .header-container {
 
-            & .logo {
-                /*background-color: teal;*/
-                padding: 5px;
-
-                & img {
-                    height: 40px;
-                    width: 40px;
-                }
+        .logo {
+            & img {
+                max-height: 30px;
+                max-width: 30px;
             }
         }
     }
 
+    .container{
+        margin-top: 10vh;
+
+        .menu-hamburguer{
+            height: 25%;
+        }
+    }
 }
 
 
 
-/*Essas medias foram escolhidas para com base no Header, vou usar como padrão*/
-/*Celulares*/
-@media (min-height: 800px) and (max-height: 950px) {
 
 
-    .header {
-        height: 9vh;
+/* BREAKPOINT PARA DISPOSITIVOS MÓVEIS DE MÉDIO PARA MAIORES
+   - Exemplos: iPhone 14 Pro Max em modo retrato e smartphones modernos com telas grandes */
 
-        .header-container {
-            height: 80%;
-            /*background-color: red;*/
+/* RESPONSIVIDADE PARA DOIS BREAKPOIT DESCRITO A SEGUIR.. 
+Configuração usada na Imagem da Logo::
+ - Tamanho padrão para os  breakpoints de 750px a 950px e 950px a 1100px */
+@media (min-height: 750px) and (max-height: 1100px) {
 
-            & .logo {
+    .header-container {
 
-                & img {
-                    height: 35px;
-                    width: 35px;
-                }
+        .logo {
+            & img {
+                max-height: 35px;
+                max-width: 35px;
             }
         }
     }
-
 }
 
-
-/*Alguns tablets Menores*/
-@media (min-height: 950px) and (max-height: 1100px) {
+@media (min-height: 750px) and (max-height: 950px) {
 
     .header {
         max-height: 8vh;
+    }
 
-        & .header-container {
-            max-height: 75%;
-            /*background-color: peru;*/
+    /* Container exibido quando o menu hamburguer é acionado
+   Este container é revelado ao clicar no ícone do menu hamburguer, contendo as opções de navegação */
+    .container {
+        margin-top: 8vh;
 
-            & .logo {
-                & img {
-                    height: 50px;
-                    width: 50px;
-                }
-            }
+        & .menu-hamburguer {
+            height: 25vh;
         }
     }
 }
 
 
-/*Grandes tablets como IPAD Pro */
-@media (min-height: 1100px) and (max-height: 1367px) {
+
+
+
+
+/* BREAKPOINT PARA TABLETS MENORES (IPAD MINI) E CELULARES EM PAISAGEM
+   - Exemplos: iPhone 14 Pro Max em orientação paisagem e outros dispositivos similares */
+
+@media (min-height: 950px) and (max-height: 1100px) {
 
     .header {
         max-height: 7vh;
-
-        & .header-container {
-            max-height: 70%;
-            /*background-color: yellow;*/
-
-            & .logo {
-                & img {
-                    height: 50px;
-                    width: 50px;
-                }
-            }
-        }
-
     }
 
+
+    /* Container exibido quando o menu hamburguer é acionado
+   Este container é revelado ao clicar no ícone do menu hamburguer, contendo as opções de navegação */
+    .container {
+        margin-top: 7vh;
+
+        & .menu-hamburguer{
+            height: 23%;
+        }
+    }
 }
 
 
-/*Grandes monitores*/
-@media (min-height: 1367px) and (max-height: 1550px) {
+
+
+
+
+/* BREAKPOINT PARA TABLETS MÉDIOS A GRANDES e Monitores de bom Tamanho*/
+
+@media (min-height: 1100px) and (max-height: 1300px) {
+
     .header {
 
         max-height: 6vh;
 
-        & .header-container {
-            max-height: 70%;
-            /*background-color: aquamarine;*/
-
-            & .logo {
+        /*Até o BREAKPoint anterior era 35px*/
+        .header-container {
+            .logo {
                 & img {
-                    height: 50px;
-                    width: 50px;
+                    max-height: 40px;
+                    max-width: 40px;
                 }
             }
         }
-
     }
-}
 
-@media (min-height: 1550px) and (max-height: 1800px) {
-    .header-container {
-        max-height: 5.5vh;
-        /*background-color: brown;*/
+
+    .hamburguer-container {
+
+        & .hamburger svg {
+            height: 2.5em;
+        }
     }
-}
 
+    /* Container exibido quando o menu hamburguer é acionado
+   Este container é revelado ao clicar no ícone do menu hamburguer, contendo as opções de navegação */
+    .container {
+        margin-top: 6vh;
 
-
-
-
-
-/*BREAKPOINT DE LARGURA*/
-
-@media (min-width: 1650px) and (max-width: 1850px) {
-
-
-    .header-container {
-        background-color: aquamarine;
-        max-width: 80%;
+        & .menu-hamburguer{
+            height: 20%;
+        }
     }
 }
 
 
-@media (min-width: 1850px) {
-    .header-container {
-        /*background-color: yellow;*/
-        max-width: 100em;
+
+
+
+
+/* BREAKPOINT PARA MONITORES GRANDES E ALCANCE FINAL
+   Ajustes finais para dispositivos com telas grandes, como monitores de desktop e laptops,
+   incluindo resoluções de até 1500px de altura. A maioria dos monitores modernos é coberta. */
+
+@media (min-height: 1300px) and (max-height: 1500px) {
+
+    .header {
+
+        max-height: 7vh;
+
+        .header-container {
+
+            width: 85%;
+
+            .logo {
+                & img {
+                    max-height: 45px;
+                    max-width: 45px;
+                }
+            }
+        }
+    }
+
+    /* Container exibido quando o menu hamburguer é acionado
+   Este container é revelado ao clicar no ícone do menu hamburguer, contendo as opções de navegação */
+    .container {
+        margin-top: 7vh;
+
+        & .menu-hamburguer{
+            height: 20%;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*Os MEDIA QUERY de Largura*/
+
+
+
+
+/*Começando a limitar o tamanho em questão de largura para o site não esticar 100% o todo tempo*/
+@media (min-width: 1650px) {
+
+}
+
 
 
 
@@ -159,8 +208,8 @@
 
         }
     }
-
 }
+
 
 
 /*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
@@ -170,8 +219,6 @@
 
     .header {
         & .header-container {
-
-
             justify-content: space-between;
 
             & .nav-container {
@@ -185,8 +232,9 @@
         }
     }
 
-    .banner{
-        height: 35vh; /*O normal é 45*/
+    .banner {
+        height: 35vh;
+        /*O normal é 45*/
 
         background-size: contain;
         background-repeat: no-repeat;
@@ -194,23 +242,25 @@
 }
 
 /*Essas medias são apenas para reajustar o banner*/
-@media (max-width: 990px){
-    
-    .banner{
+@media (max-width: 990px) {
+
+    .banner {
         height: 30vh;
     }
 
 }
-@media (max-width: 800px){
-    
-    .banner{
+
+@media (max-width: 800px) {
+
+    .banner {
         height: 25vh;
     }
 
 }
-@media (max-width: 680px){
-    
-    .banner{
+
+@media (max-width: 680px) {
+
+    .banner {
         height: 20vh;
     }
 
@@ -219,7 +269,8 @@
 
 /*GAP ENTRE 550 A 1099 Não foi necessário modificar*/
 
-/*Redimensionar o tamanho da Lupa de Procurar em dispositivos Mobile*/
+
+/*dispositivos Mobile*/
 @media (max-width: 550px) {
 
     .header {
@@ -236,16 +287,7 @@
         }
     }
 
-
-    /*Menu que aparece ao clicar no menu Hamburguer*/
-    .container{
-        & .menu-hamburguer{
-            height: 25vh;
-        }
-    }
-
-
-    .banner{
+    .banner {
         height: 16vh;
 
         background-size: contain;

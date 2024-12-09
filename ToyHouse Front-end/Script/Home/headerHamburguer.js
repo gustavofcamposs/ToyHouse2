@@ -21,16 +21,3 @@ function clickMenu() {
 
 
 
-// Adiciona um listener para o redimensionamento da janela
-window.addEventListener('resize', function() {
-    let menu = document.getElementById('menu-hamburguer');
-    let button = document.getElementById('menu-button');
-    var estilos = window.getComputedStyle(menu);
-
-    // Se a largura da tela for maior que 1000px e o menu estiver visível
-    if (window.innerWidth > 1000 && estilos.display !== 'none') {
-        // Fecha o menu
-        menu.style.display = "none";
-        button.classList.remove('open'); // Remove a classe 'open' para reverter o ícone
-    }
-});
