@@ -1,7 +1,7 @@
 /* BREAKPOINT PARA DISPOSITIVOS PEQUENOS*/
-@media (min-height: 630px) and (max-height: 750px){
+@media (min-height: 630px) and (max-height: 750px) {
 
-    .header{
+    .header {
         max-height: 10vh;
     }
 
@@ -15,10 +15,10 @@
         }
     }
 
-    .container{
+    .container {
         margin-top: 10vh;
 
-        .menu-hamburguer{
+        .menu-hamburguer {
             height: 25%;
         }
     }
@@ -84,7 +84,7 @@ Configuração usada na Imagem da Logo::
     .container {
         margin-top: 7vh;
 
-        & .menu-hamburguer{
+        & .menu-hamburguer {
             height: 23%;
         }
     }
@@ -127,7 +127,7 @@ Configuração usada na Imagem da Logo::
     .container {
         margin-top: 6vh;
 
-        & .menu-hamburguer{
+        & .menu-hamburguer {
             height: 20%;
         }
     }
@@ -166,7 +166,7 @@ Configuração usada na Imagem da Logo::
     .container {
         margin-top: 7vh;
 
-        & .menu-hamburguer{
+        & .menu-hamburguer {
             height: 20%;
         }
     }
@@ -186,34 +186,47 @@ Configuração usada na Imagem da Logo::
 /*Os MEDIA QUERY de Largura*/
 
 
+/* Para celulares muito pequenos 
+ - Como Z Fold 5 OU Modelos antigos como Iphone 5*/
+@media (max-width: 360px) {}
 
 
-/*Começando a limitar o tamanho em questão de largura para o site não esticar 100% o todo tempo*/
-@media (min-width: 1650px) {
-
-}
-
-
-
-
-
-/*Esse é o último BreakPoint antes do Menu Hamburguer.*/
-@media (min-width: 1100px) and (max-width: 1350px) {
+/*Para smartphones padrão (a maioria dos celulares modernos)
+ - Como Iphone, Samsung S20 e etc*/
+@media (min-width: 360px) and (max-width: 500px) {
 
     .header {
         & .header-container {
-            & .nav-container {
-                min-width: 90%;
-            }
 
+            & .hamburguer-container {
+
+                & .button {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
         }
     }
 }
 
 
+/*Para smartPhones caso tenha algum muito grande e maioria dos Tables
+ - IPAD AIR, IPAD MINI e tablets semelhantes*/
+@media (min-width: 500px) and (max-width: 820px) {
+
+    .header {
+    }
+}
+
+
+
+/*GAP DE 820 A 1100*/
+
+
+
+/*TABLETS maiores*/
 
 /*Nesse BreakPoint vou começar a usar o Menu Hamburguer*/
-/*E nesse breakpoint começa a ser ajustado o Banner*/
 
 @media (max-width: 1100px) {
 
@@ -231,66 +244,79 @@ Configuração usada na Imagem da Logo::
 
         }
     }
-
-    .banner {
-        height: 35vh;
-        /*O normal é 45*/
-
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-}
-
-/*Essas medias são apenas para reajustar o banner*/
-@media (max-width: 990px) {
-
-    .banner {
-        height: 30vh;
-    }
-
-}
-
-@media (max-width: 800px) {
-
-    .banner {
-        height: 25vh;
-    }
-
-}
-
-@media (max-width: 680px) {
-
-    .banner {
-        height: 20vh;
-    }
-
 }
 
 
-/*GAP ENTRE 550 A 1099 Não foi necessário modificar*/
 
 
-/*dispositivos Mobile*/
-@media (max-width: 550px) {
+/*Esse é o último BreakPoint antes do Menu Hamburguer.*/
+@media (min-width: 1100px) and (max-width: 1350px) {
 
     .header {
 
         & .header-container {
-
-            & .hamburguer-container {
-
-                & .button {
-                    height: 32px;
-                    width: 32px;
-                }
+            & .nav-container {
+                min-width: 90%;
             }
+
         }
     }
+}
 
-    .banner {
-        height: 16vh;
 
-        background-size: contain;
-        background-repeat: no-repeat;
+
+
+
+/*1529 É A LARGURA DO MEU NOTE*/
+@media (min-width: 1350px) and (max-width: 1550px) {
+}
+
+
+
+
+/*NoteBOOKS MAIORES E MONITORES MÉDIOS*/
+@media (min-width: 1550px) and (max-width: 1750px) {
+    
+
+    .header{
+        max-width: 75%;
+        background-color: palegoldenrod;
     }
+
+}
+
+
+/*Para monitores mais Novos*/
+@media (min-width: 1750px) and (max-width: 1850px) {
+    
+
+    .header{
+        max-width: 72%;
+        background-color: paleturquoise;
+    }
+
+}
+
+
+/*Para os melhores Monitores e resoluções 4k*/
+@media (min-width: 1850px) and (max-width: 2000px) {
+    
+
+    .header{
+        max-width: 69%;
+        background-color: palevioletred;
+    }
+
+}
+
+
+/*OS MAIORES MONITORES, SE TIVER MAIOR É MENTIRA.*/
+@media (min-width: 2000px) and (max-width: 2200px) {
+    
+
+    .header{
+        max-width: 64%;
+        background-color: plum;
+    }
+
 }
