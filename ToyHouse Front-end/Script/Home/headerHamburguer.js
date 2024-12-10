@@ -1,28 +1,36 @@
 function clickMenu() {
-
-    /* A variável 'menu' referencia o elemento HTML,
-    e 'estilos' usa window.getComputedStyle(menu) para pegar os estilos aplicados ao menu no momento da chamada.*/
-
-
-    let submenu = document.getElementById('subMenu'); /*Preciso deixar o SUBMENU none quando estiver aberto o Menu Hamburguer*/
-
-
-    let menu = document.getElementById('menu-hamburguer');
-    var estilos = window.getComputedStyle(menu);
-
+    let submenu = document.getElementById('subMenu'); // Submenu
+    let menu = document.getElementById('menu-hamburguer'); // Menu hambúrguer
+    var estilos = window.getComputedStyle(menu); // Estilos aplicados ao menu
 
     // Se o menu estiver oculto (display: none)
     if (estilos.display === 'none') {
-
-        menu.style.display = "flex"; //Torna Visivel
-        submenu.style.display = "none";
+        menu.style.display = "flex"; // Torna o menu visível
+        submenu.style.display = "none"; // Oculta o submenu
     } else {
-        menu.style.display = "none";
-        submenu.style.display = "flex";
+        menu.style.display = "none"; // Esconde o menu
+        submenu.style.display = "flex"; // Exibe o submenu
     }
 
     console.log('FLEX:' + estilos.display);
 }
 
 
+// Função que fecha o menu quando a página é rolada
+function fecharMenuAoRolar() {
+    let menu = document.getElementById('menu-hamburguer');
+    var estilos = window.getComputedStyle(menu);
 
+    // Acessando o input dentro da label com id="hamburger"
+    let input = document.querySelector('#hamburger input');
+
+    // Se o menu estiver aberto e a página estiver rolando para baixo
+    if (estilos.display === 'flex') {
+        menu.style.display = "none"; // Fecha o menu
+        input.checked = false;
+
+    }
+}
+
+// Adiciona o event listener de rolagem
+window.addEventListener('scroll', fecharMenuAoRolar);

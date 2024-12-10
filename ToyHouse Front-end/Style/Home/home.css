@@ -119,7 +119,7 @@
     position: fixed;
     justify-content: flex-end;
 
-    height: 90vh;
+    height: auto;
     width: 100%;
 
     & .menu-hamburguer {
