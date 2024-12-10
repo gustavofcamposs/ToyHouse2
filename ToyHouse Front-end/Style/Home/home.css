@@ -276,6 +276,9 @@
     height: 6vh;
     width: 100%;
 
+    position: sticky; /* Torna o menu fixo ao rolar, mas sem remover do fluxo */
+    top: 0; /* Fica fixo no topo da página quando o usuário rolar */
+
 
     .icon:nth-child(n + 2){
         margin-left: 45px;
@@ -307,4 +310,10 @@
     .icon:hover{
         box-shadow: none;
     }
+}
+
+
+.teste{
+    height: 190vh;
+    width: 100%;
 }
