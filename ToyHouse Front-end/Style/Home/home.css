@@ -276,9 +276,13 @@
     height: 6vh;
     width: 100%;
 
-    position: sticky; /* Torna o menu fixo ao rolar, mas sem remover do fluxo */
-    top: 0; /* Fica fixo no topo da página quando o usuário rolar */
+    background-color: var(--cor-principal);
 
+    margin-top: 20px;
+
+    position: sticky; /* Torna o menu fixo ao rolar, mas sem remover do fluxo */
+    top: 20px; /* Fica fixo no topo da página quando o usuário rolar */
+    /*Top e margin TOP com o mesmo valor para ficarem com um na mesma altura*/
 
     .icon:nth-child(n + 2){
         margin-left: 50px;
@@ -312,7 +316,18 @@
 }
 
 
+
 .teste{
-    height: 190vh;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 130vh;
     width: 100%;
+
+    & img{
+        height: 80%;
+        width: 80%;
+    }
 }
