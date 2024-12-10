@@ -214,8 +214,7 @@ Configuração usada na Imagem da Logo::
  - IPAD AIR, IPAD MINI e tablets semelhantes*/
 @media (min-width: 500px) and (max-width: 820px) {
 
-    .header {
-    }
+  
 }
 
 
@@ -283,6 +282,11 @@ Configuração usada na Imagem da Logo::
         background-color: palegoldenrod;
     }
 
+    .sub-header{
+        max-width: 75%;
+        background-color: thistle;
+    }
+
 }
 
 
@@ -293,6 +297,11 @@ Configuração usada na Imagem da Logo::
     .header{
         max-width: 72%;
         background-color: paleturquoise;
+    }
+
+    .sub-header{
+        max-width: 72%;
+        background-color: firebrick;
     }
 
 }
@@ -307,6 +316,10 @@ Configuração usada na Imagem da Logo::
         background-color: palevioletred;
     }
 
+    .sub-header{
+        max-width: 69%;
+        background-color: seagreen;
+    }
 }
 
 
@@ -317,6 +330,11 @@ Configuração usada na Imagem da Logo::
     .header{
         max-width: 64%;
         background-color: plum;
+    }
+
+    .sub-header{
+        max-width: 64%;
+        background-color: red;
     }
 
 }

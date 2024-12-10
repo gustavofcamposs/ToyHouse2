@@ -156,7 +156,7 @@
     align-items: center;
     justify-content: center;
     color: #e8e8e8;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-principal);
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -260,4 +260,51 @@
 .hamburger input:checked+svg .line-top-bottom {
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
+}
+
+
+
+
+/*Aqui Começa a configuração do SUBMENU*/
+
+.sub-header{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 6vh;
+    width: 100%;
+
+
+    .icon:nth-child(n + 2){
+        margin-left: 45px;
+    }
+
+
+    .icon{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        height: 35px;
+        width: 35px;
+
+        border-radius: 30px;
+        box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15),
+        2px 2px 2px rgba(0, 0, 0, 0.1),
+        -3px -3px 2px rgba(255, 255, 255, 0.05),
+        -2px -2px 1px rgba(255, 255, 255, 0.05);
+        transition: 0.3s all;
+
+        img{
+            height: 85%;
+            width: 85%;
+        }
+    }
+
+    .icon:hover{
+        box-shadow: none;
+    }
 }
