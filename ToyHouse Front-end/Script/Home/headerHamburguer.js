@@ -18,6 +18,7 @@ function clickMenu() {
 
 // Função que fecha o menu quando a página é rolada
 function fecharMenuAoRolar() {
+    let submenu = document.getElementById('subMenu'); // Submenu
     let menu = document.getElementById('menu-hamburguer');
     var estilos = window.getComputedStyle(menu);
 
@@ -27,8 +28,8 @@ function fecharMenuAoRolar() {
     // Se o menu estiver aberto e a página estiver rolando para baixo
     if (estilos.display === 'flex') {
         menu.style.display = "none"; // Fecha o menu
+        submenu.style.display = "flex";
         input.checked = false;
-
     }
 }
 
