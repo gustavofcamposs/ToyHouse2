@@ -18,6 +18,7 @@
 :root {
     --cor-primaria: #7BC8F6;
     --cor-principal: #FDFDFE;
+    --cor-teste: red;
 }
 
 .header {
@@ -278,10 +279,10 @@
 
     background-color: var(--cor-principal);
 
-    margin-top: 20px;
+    margin-top: 10px;
 
     position: sticky; /* Torna o menu fixo ao rolar, mas sem remover do fluxo */
-    top: 20px; /* Fica fixo no topo da página quando o usuário rolar */
+    top: 0px; /* Fica fixo no topo da página quando o usuário rolar */
     /*Top e margin TOP com o mesmo valor para ficarem com um na mesma altura*/
 
     .icon:nth-child(n + 2){
@@ -295,8 +296,8 @@
         justify-content: center;
         align-items: center;
 
-        height: 30px;
-        width: 60px;
+        height: 25px;
+        width: 45px;
 
         box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15),
         2px 2px 2px rgba(0, 0, 0, 0.1),
@@ -317,17 +318,24 @@
 
 
 
-.teste{
+.banner-exposicao{
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    height: 130vh;
+    height: 50vh;
     width: 100%;
 
     & img{
-        height: 80%;
-        width: 80%;
+        height: 85%;
+        width: 60%;
     }
+}
+
+
+
+.alo{
+    height: 100vh;
+    width: 100%;
 }
