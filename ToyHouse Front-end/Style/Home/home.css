@@ -7,6 +7,11 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 .site-container{
     display: flex;
 
@@ -28,7 +33,6 @@
     align-items: center;
 
     height: 14vh;
-
     width: 100%;
 
     background-color: var(--cor-principal);
@@ -40,7 +44,7 @@
         align-items: center;
         justify-content: space-around;
 
-        height: 90%;
+        height: 110%;
         width: 90%;
 
 
@@ -63,7 +67,6 @@
             height: 90%;
             width: 75%;
 
-            /*border: tomato solid 2px;*/
         }
 
         /*Vai aparecer somente no breakpoint 1350px Width*/
@@ -90,17 +93,20 @@
 }
 
 
-/**/
+/*CSS PADRÃO DO navItem*/
+/*Cada item como é tratado dentro do header-container, que pertence ao header Principal*/
+
+.nav-item p{
+    cursor: pointer;
+}
 .nav-item {
     display: flex;
     align-items: center;
 
     list-style: none;
 
-    height: auto;
+    height: 100%;
     width: auto;
-
-    cursor: pointer;
 
     font-size: 14px;
 
@@ -110,6 +116,41 @@
         margin-left: 7px;
     }
 }
+
+
+
+/*Esses são os 3 container que serão exibidos ao clicar em cada nav-item*/
+
+/*nav-item(1)*/
+.conheca-nossas-marcas{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 250px;
+    width: 80%;
+
+    position: absolute;
+    z-index: 1;
+
+    background-color: hsla(0, 0%, 100%, .8);
+
+    /* Entendo a transição suave com esse CSS e a iteração com o JavaScript
+    Exatamente! O comportamento que você está observando ocorre porque,
+    quando você usa visibility: hidden e opacity: 0, o elemento ainda ocupa
+    espaço no layout, mas não é visível ou interativo. Ou seja, o elemento
+    está tecnicamente presente na página, mas não aparece, e é essa combinação
+    que "oculta" o popup de forma eficiente. Além disso, com visibility: hidden,
+    o elemento não recebe interação, e com opacity: 0, ele é completamente invisível,
+    mesmo que ele ainda esteja presente no fluxo do layout*/
+    
+    opacity: 0;                      /* Inicialmente invisível */
+    transform: translateY(-20px);    /* Desce um pouco para ficar uma transição sauve, no JavaScript ele volta para a posição Original*/
+    visibility: hidden;              /* Impede interações com o popup quando invisível */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
 
 
 

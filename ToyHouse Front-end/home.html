@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./Style/Home/home.css">
     <link rel="stylesheet" href="./Style/Home/homeResponsivo.css">
     <script src="./Script/Home/headerHamburguer.js"></script>
+    <script src="./Script/Home/DropdownSubHeader.js"></script>
 
     <link rel="icon" href="./Image/Home/ToyHouseLogo.jpg" type="image/x-icon">
 
@@ -29,7 +30,8 @@
 
     <div class="site-container">
 
-        <header class="header">
+        <!-- Header Principal -->
+        <header class="header" id="header">
             <div class="header-container">
 
                 <div class="logo">
@@ -37,18 +39,21 @@
                 </div>
 
                 <nav class="nav-container">
-                    <li class="nav-item">
+                    <li class="nav-item" id="navItem1">
                         <p>Conheça nossas Marcas</p>
                         <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
                     </li>
+
                     <li class="nav-item">
                         <p>Visualize por Idade</p>
                         <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
                     </li>
+
                     <li class="nav-item">
                         <p>Vizualize Nossas Categorias</p>
                         <img src="./Image/Home/ArrowItemNav.webp" alt="Seta apontada para baixo">
                     </li>
+
                     <li class="nav-item">
                         <button class="button">
                             <span class="span">🔎</span>
@@ -64,7 +69,7 @@
 
                     <!-- Menu hamburguer com checkbox para mostrar/esconder conteúdo -->
                     <label class="hamburger" id="hamburger" aria-label="Abrir menu">
-                        <input type="checkbox"  onclick="clickMenu()">
+                        <input type="checkbox" onclick="clickMenu()">
                         <svg viewBox="0 0 32 32">
                             <path class="line line-top-bottom"
                                 d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
@@ -78,7 +83,15 @@
         </header>
 
 
+        <!--Container de cada nav-item acima, Conheça Nossas Marcas, Visualize Por Idade e Nossas Categorias-->
+        <section class="conheca-nossas-marcas" id="item1">
+            <script src="./Script/Home/DropdownSubHeader.js"></script>
+        </section>
+
+
+
         <!--Esse container é o que é aberto quando o input hamburguer for clicado-->
+        <!--MENU HAMBURGUER-->
         <div class="container" id="menu-hamburguer">
             <div class="menu-hamburguer">
                 <p>Conheça nossas Marcas</p>
@@ -89,6 +102,7 @@
             </div>
         </div>
 
+        <!--sub MENU, com as opções de Carrinho de Compra, produtos favoritos, perfil-->
         <div class="sub-header" id="subMenu">
             <div class="icon"><img src="./Image/Home/Icones/IconProdutosPreferidos.webp"
                     alt="Ícone de produtos favoritos ou salvos"></div>
@@ -98,6 +112,7 @@
                     alt="Ícone de acesso ao carrinho de compras"></div>
         </div>
 
+        <!--Banner de exposição, banner logo abaixo do SubMenu-->
         <div class="banner-exposicao">
             <img src="./Image/Home/OpcaoBanner 1.jpg" alt="">
         </div>
